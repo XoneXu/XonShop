@@ -1,0 +1,114 @@
+.navbar {
+    background-color: var(--kolor-ciemniejszy);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--cien-elegancki);
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Magiczna część: trzy sekcje górnego paska */
+.top-section {
+    flex: 1; /* Każda sekcja chce zabrać tyle samo miejsca */
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.top-section.left {
+    box-sizing: border-box;
+    justify-content: flex-start;
+}
+
+.top-section.center {
+    flex: 2; /* Środkowa sekcja może być szersza, ale wciąż wycentrowana */
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.top-section.right {
+    box-sizing: border-box;
+    justify-content: flex-end;
+}
+
+/* Stylizacja elementów wewnątrz (zostawiamy Twój styl) */
+.logo {
+    background-color: var(--akcent-ciemniejszy);
+    padding: 8px 25px;
+    border-radius: 50px;
+    color: var(--tekst-ciemniejszy);
+    font-size: 22px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+    margin: 0;
+    white-space: nowrap; /* Zapobiega łamaniu logo */
+}
+
+.search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.searchbox {
+    width: 80%; /* Szerokość wewnątrz sekcji center */
+    max-width: 400px;
+    height: 40px;
+    background-color: var(--kolor-jasniejszy);
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 8px;
+    color: var(--tekst);
+    padding: 0 15px;
+    font-family: Minecraftia;
+    transition: 0.3s;
+}
+
+.searchbox:focus {
+    outline: none;
+    border-color: var(--akcent-jasny);
+    box-shadow: 0 0 10px rgba(166, 138, 100, 0.3);
+}
+
+.basket-icon {
+    width: 45px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.basket-icon:hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+/* Wycentrowane przyciski pod spodem */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.nav-button {
+    padding: 10px 30px;
+    background-color: var(--akcent-okej);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: Minecraftia;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-button:hover {
+    background-color: var(--akcent-jasny);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}

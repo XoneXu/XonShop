@@ -1,0 +1,41 @@
+<div class="home-container">
+    <h2 class="section-title">Our best selling Models</h2>
+    
+    <div class="product-grid">
+        @for (product of products; track product.id) {
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="{{ product.img }}" alt="{{ product.name }}">
+                </div>
+                <div class="product-info">
+                    <h3>{{ product.name }}</h3>
+                    <p class="price">{{ product.price }}</p>
+                    <button class="buy-button" (click)="openDetails(product)">Details</button>
+                </div>
+            </div>
+        }
+    </div>
+
+    @if (isSidebarOpen) {
+        <div class="sidebar-overlay" (click)="closeSidebar()"></div>
+    }
+
+    <div class="sidebar" [class.open]="isSidebarOpen">
+        
+        @if (selectedProduct) {
+            <div class="sidebar-header">
+                <h2>{{ selectedProduct.name }}</h2>
+                <button class="close-btn" (click)="closeSidebar()">X</button>
+            </div>
+            <div class="sidebar-content">
+                <div class="sidebar-image">
+                    <img src="{{ selectedProduct.img }}" alt="{{ selectedProduct.name }}">
+                </div>
+                <p class="sidebar-price">{{ selectedProduct.price }}</p>
+                <p class="sidebar-desc">{{ selectedProduct.desc }}</p>
+                <button class="buy-button add-to-cart">Add to Basket</button>
+            </div>
+        }
+        
+    </div>
+</div>

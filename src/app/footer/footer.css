@@ -1,0 +1,35 @@
+.footer-component {
+    background-color: var(--kolor-ciemniejszy);
+    padding: 30px;
+    margin-top: auto;
+    border-top: 1px solid var(--akcent-ciemniejszy);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: var(--tekst-ciemniejszy);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--akcent-jasny);
+}
+
+.footer-bottom {
+    font-size: 14px;
+    color: var(--tekst-ciemniejszy);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 15px;
+}
+
+.date-time {
+    color: var(--akcent-jasny);
+    font-weight: bold;
+}

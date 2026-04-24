@@ -1,12 +1,20 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
+// Krótkie importy dopasowane do Twoich plików
+import { Navbar } from './navbar/navbar';
+import { Home } from './home/home';
+import { Footer } from './footer/footer';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  // Dodajemy krótkie nazwy klas do imports
+  imports: [RouterOutlet, Navbar, Home, Footer, DatePipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('XonShop');
+  title = 'XonShop';
 }
