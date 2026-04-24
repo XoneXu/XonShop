@@ -1,0 +1,19 @@
+<div *ngIf="isOpen" class="sidebar-overlay" (click)="onClose()"></div>
+
+<div class="sidebar" [class.open]="isOpen">
+    <div *ngIf="product">
+        <div class="sidebar-header">
+            <h2>{{ product.name }}</h2>
+            <button class="close-btn" (click)="onClose()">X</button>
+        </div>
+        
+        <div class="sidebar-content">
+            <div class="sidebar-image">
+                <img [src]="product.img" [alt]="product.name">
+            </div>
+            <p class="sidebar-price">{{ product.price }}</p>
+            <p class="sidebar-desc">{{ product.desc }}</p>
+            <button class="buy-button add-to-cart">Add to Basket</button>
+        </div>
+    </div>
+</div>

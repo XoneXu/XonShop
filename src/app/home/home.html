@@ -14,28 +14,10 @@
                 </div>
             </div>
         }
-    </div>
-
-    @if (isSidebarOpen) {
-        <div class="sidebar-overlay" (click)="closeSidebar()"></div>
-    }
-
-    <div class="sidebar" [class.open]="isSidebarOpen">
-        
-        @if (selectedProduct) {
-            <div class="sidebar-header">
-                <h2>{{ selectedProduct.name }}</h2>
-                <button class="close-btn" (click)="closeSidebar()">X</button>
-            </div>
-            <div class="sidebar-content">
-                <div class="sidebar-image">
-                    <img src="{{ selectedProduct.img }}" alt="{{ selectedProduct.name }}">
-                </div>
-                <p class="sidebar-price">{{ selectedProduct.price }}</p>
-                <p class="sidebar-desc">{{ selectedProduct.desc }}</p>
-                <button class="buy-button add-to-cart">Add to Basket</button>
-            </div>
-        }
-        
+        <app-product-details 
+        [product]="selectedProduct" 
+        [isOpen]="isSidebarOpen" 
+        (close)="closeSidebar()">
+    </app-product-details>
     </div>
 </div>

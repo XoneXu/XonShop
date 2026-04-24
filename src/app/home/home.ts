@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { ProductDetails } from '../product-details/product-details';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [ProductDetails],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -12,7 +14,7 @@ export class Home {
   rawProducts = [
     { id: 1, desc: 'Meow Meow Meow Meow', price: 19.99 },
     { id: 2, desc: 'Meow Meow Meow', price: 5.99 },
-    { id: 3, desc: 'Meow Meow', price: 10.99 },
+    { id: 3, desc: 'Meow Meow', price: 10.01 },
     { id: 4, desc: 'Meow', price: 2.99 },
     { id: 5, desc: 'Meow Meow Meow Meow Meow', price: 29.99 },
     { id: 6, desc: 'Meow Meow Meow Meow Meow Meow', price: 199.99 }
@@ -23,7 +25,7 @@ export class Home {
     id: p.id,
     name: 'Product ' + p.id,
     desc: p.desc,
-    price: p.price,
+    price: p.price + '€',
     img: '/product' + p.id + '.png' // (Dodałem .png, zakładając, że to ścieżki do obrazków)
   }));
 
