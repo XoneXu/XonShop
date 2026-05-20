@@ -73,3 +73,12 @@
     object-fit: cover;
     border-radius: 8px; /* Żeby obrazek miał te same zaokrąglenia co pudełko */
 }
+.newsletter{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.newsletter app-newsletter{
+    display: block;
+    width: 100%;
+}

@@ -59,8 +59,7 @@
 }
 
 .searchbox {
-    width: 80%; /* Szerokość wewnątrz sekcji center */
-    max-width: 400px;
+    width: 50%;
     height: 40px;
     background-color: var(--kolor-jasniejszy);
     border: 1px solid rgba(0,0,0,0.2);
@@ -68,13 +67,15 @@
     color: var(--tekst);
     padding: 0 15px;
     font-family: Minecraftia;
-    transition: 0.3s;
+    transition: 0.4s;
 }
 
 .searchbox:focus {
     outline: none;
     border-color: var(--akcent-jasny);
     box-shadow: 0 0 10px rgba(166, 138, 100, 0.3);
+    scale: 1.02;
+    width: 150%;
 }
 
 .basket-icon {

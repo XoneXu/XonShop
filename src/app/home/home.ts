@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ProductDetails } from '../product-details/product-details';
+import { Newsletter } from "../newsletter/newsletter";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProductDetails],
+  imports: [ProductDetails, Newsletter],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
@@ -17,7 +18,7 @@ export class Home {
     { id: 3, desc: 'Meow Meow', price: 10.01 },
     { id: 4, desc: 'Meow', price: 2.99 },
     { id: 5, desc: 'Meow Meow Meow Meow Meow', price: 29.99 },
-    { id: 6, desc: 'Meow Meow Meow Meow Meow Meow', price: 199.99 }
+    { id: 6, desc: 'Meow Meow Meow Meow Meow Meow', price: 199.99 },
   ];
 
   // 2. Kod automatycznie buduje pełną listę
