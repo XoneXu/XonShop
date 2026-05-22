@@ -42,8 +42,10 @@
 
 /* Stylizacja elementów wewnątrz (zostawiamy Twój styl) */
 .logo {
+    
     background-color: var(--akcent-ciemniejszy);
     padding: 8px 25px;
+    padding-right: 20px;
     border-radius: 50px;
     color: var(--tekst-ciemniejszy);
     font-size: 22px;

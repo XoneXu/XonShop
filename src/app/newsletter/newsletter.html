@@ -1,8 +1,8 @@
 <div class="letter-body">
     <h2 class="header">Subscribe to our Newsletter!</h2>
-    <input type="email" placeholder="Enter your email address here!" class="email-input">
+    <input type="email" placeholder="Enter your email address here!"  [(ngModel)]="emailInput" (keyup.enter)="subscribe()" class="email-input">
     <br>
-    <button class="subscribe-button">Subscribe</button>
+    <button class="subscribe-button" (click)="subscribe()">Subscribe</button>
     <p>Get the latest informations from our website via the Newsletter and always be on time with the latest updates!</p>
     <p class="add">By subscribing to the newsletter get 10% off cupon!</p>
 </div>
