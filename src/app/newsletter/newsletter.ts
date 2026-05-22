@@ -19,7 +19,7 @@ export class Newsletter {
     // Zabezpieczenie: jeśli ktoś kliknie, a input jest pusty, nic nie rób
     if (!this.emailInput) return; 
 
-    const url = 'http://localhost:5070/api/newsletter';
+    const url = 'https://xonshopbackend.onrender.com/api/newsletter';
     
     // Tworzymy paczkę. Zauważ, że klucz to "Email" - z dużej litery, 
     // dokładnie tak, jak nazwaliśmy właściwość w klasie "Subscriber" w C#!
